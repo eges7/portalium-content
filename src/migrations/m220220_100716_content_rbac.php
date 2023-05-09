@@ -7,7 +7,7 @@ class m220220_100716_content_rbac extends Migration
     public function up()
     {
         $auth = \Yii::$app->authManager;
-
+      
         $role = \Yii::$app->setting->getValue('site::admin_role');
         $admin = (isset($role) && $role != '') ? $auth->getRole($role) : $auth->getRole('admin');
 
